@@ -1,0 +1,156 @@
+import React, { useEffect, useState } from 'react';
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useAppSelector } from '../../stores/hooks';
+import LayoutGuest from '../../layouts/Guest';
+import WebSiteHeader from '../../components/WebPageComponents/Header';
+import WebSiteFooter from '../../components/WebPageComponents/Footer';
+import {
+  HeroDesigns,
+  FeaturesDesigns,
+  PricingDesigns,
+  AboutUsDesigns,
+  ContactFormDesigns,
+} from '../../components/WebPageComponents/designs';
+
+import HeroSection from '../../components/WebPageComponents/HeroComponent';
+
+import FeaturesSection from '../../components/WebPageComponents/FeaturesComponent';
+
+import PricingSection from '../../components/WebPageComponents/PricingComponent';
+
+import AboutUsSection from '../../components/WebPageComponents/AboutUsComponent';
+
+import ContactFormSection from '../../components/WebPageComponents/ContactFormComponent';
+
+export default function WebSite() {
+  const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
+  const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
+  const projectName = 'trial flatlogic otel astronomy shop';
+
+  useEffect(() => {
+    const darkElement = document.querySelector('body .dark');
+    if (darkElement) {
+      darkElement.classList.remove('dark');
+    }
+  }, []);
+
+  const features_points = [
+    {
+      name: 'Wide Product Range',
+      description:
+        'Choose from a diverse selection of telescopes and accessories tailored to both beginners and seasoned astronomers. Find the perfect fit for your stargazing needs.',
+      icon: 'mdiTelescope',
+    },
+    {
+      name: 'User-Friendly Interface',
+      description:
+        'Navigate our site with ease. Our intuitive design ensures a smooth shopping experience, allowing you to find and purchase products effortlessly.',
+      icon: 'mdiMonitor',
+    },
+    {
+      name: 'Secure Checkout',
+      description:
+        'Shop with confidence. Our secure checkout process protects your personal and payment information, ensuring a safe transaction every time.',
+      icon: 'mdiLock',
+    },
+  ];
+
+  const pricing_features = {
+    standard: {
+      features: [
+        'Access to basic telescopes',
+        'Standard customer support',
+        'Monthly newsletter',
+      ],
+      limited_features: ['Limited product range', 'Basic analytics'],
+    },
+    premium: {
+      features: [
+        'Access to all telescopes',
+        'Priority customer support',
+        'Weekly newsletter',
+      ],
+      also_included: ['Advanced analytics', 'Exclusive discounts'],
+    },
+    business: {
+      features: [
+        'Custom telescope solutions',
+        'Dedicated account manager',
+        'Daily insights and reports',
+      ],
+    },
+  };
+
+  const description = {
+    standard:
+      'Ideal for individual stargazers looking to explore the universe with essential tools and support.',
+    premium:
+      'Perfect for small businesses or astronomy clubs seeking a comprehensive range of products and enhanced support.',
+    business:
+      'Designed for enterprises requiring tailored solutions, dedicated support, and in-depth analytics.',
+  };
+
+  return (
+    <div className='flex flex-col min-h-screen'>
+      <Head>
+        <title>{`Welcome to Our Astronomy Shop - Explore the Universe`}</title>
+        <meta
+          name='description'
+          content={`Discover a wide range of telescopes and astronomy equipment at our Astronomy Shop. Browse our products, learn about our features, and get in touch with us today.`}
+        />
+      </Head>
+      <WebSiteHeader projectName={'trial flatlogic otel astronomy shop'} />
+      <main className={`flex-grow    bg-white  rounded-none  `}>
+        <HeroSection
+          projectName={'trial flatlogic otel astronomy shop'}
+          image={['Stargazing with a telescope']}
+          mainText={`Explore the Universe with ${projectName}`}
+          subTitle={`Discover a world of telescopes and astronomy gear at ${projectName}. Your journey to the stars begins here. Browse our collection and find the perfect equipment for your stargazing adventures.`}
+          design={HeroDesigns.IMAGE_BG || ''}
+          buttonText={`Shop Now`}
+        />
+
+        <FeaturesSection
+          projectName={'trial flatlogic otel astronomy shop'}
+          image={['Telescopes and accessories display']}
+          withBg={0}
+          features={features_points}
+          mainText={`Discover the Benefits of ${projectName}`}
+          subTitle={`Explore the unique features of ${projectName} that make your stargazing experience seamless and enjoyable.`}
+          design={FeaturesDesigns.CARDS_GRID_WITH_ICONS || ''}
+        />
+
+        <PricingSection
+          projectName={'trial flatlogic otel astronomy shop'}
+          withBg={1}
+          features={pricing_features}
+          description={description}
+        />
+
+        <AboutUsSection
+          projectName={'trial flatlogic otel astronomy shop'}
+          image={['Team exploring the night sky']}
+          mainText={`Unveiling the Universe with ${projectName}`}
+          subTitle={`At ${projectName}, we are passionate about bringing the wonders of the cosmos closer to you. Our mission is to provide high-quality telescopes and accessories that inspire exploration and discovery.`}
+          design={AboutUsDesigns.IMAGE_LEFT || ''}
+          buttonText={`Learn More`}
+        />
+
+        <ContactFormSection
+          projectName={'trial flatlogic otel astronomy shop'}
+          design={ContactFormDesigns.WITH_IMAGE || ''}
+          image={['Person using a telescope']}
+          mainText={`Get in Touch with ${projectName} `}
+          subTitle={`We're here to assist you with any inquiries or support you need. Reach out to us anytime, and we'll respond promptly to ensure your stargazing experience is stellar.`}
+        />
+      </main>
+      <WebSiteFooter projectName={'trial flatlogic otel astronomy shop'} />
+    </div>
+  );
+}
+
+WebSite.getLayout = function getLayout(page: ReactElement) {
+  return <LayoutGuest>{page}</LayoutGuest>;
+};
