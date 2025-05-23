@@ -14,7 +14,6 @@ import {
   ContactFormDesigns,
 } from '../components/WebPageComponents/designs';
 
-import HeroSection from '../components/WebPageComponents/HeroComponent';
 
 import FeaturesSection from '../components/WebPageComponents/FeaturesComponent';
 
@@ -23,6 +22,7 @@ import PricingSection from '../components/WebPageComponents/PricingComponent';
 import AboutUsSection from '../components/WebPageComponents/AboutUsComponent';
 
 import ContactFormSection from '../components/WebPageComponents/ContactFormComponent';
+import Logo from '../components/Logo';
 
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
@@ -128,15 +128,16 @@ export default function WebSite() {
         projectName={'Ellingson Mineral Company of New York, New York'}
         pages={pages}
       />
+   <div className="flex justify-center my-4">
+     <Logo />
+   </div>
       <main className={`flex-grow    bg-white  rounded-none  `}>
-        <HeroSection
-          projectName={'Ellingson Mineral Company of New York, New York'}
-          image={['Stargazing with a telescope']}
-          mainText={`Explore the Universe with ${projectName}`}
-          subTitle={`From mining rare earths to erasing digital footprints, Ellingson offers everything a morally flexible enterprise needs—whether you’re digging for gold or digging into government servers.`}
-          design={HeroDesigns.IMAGE_BG || ''}
-          buttonText={`Shop Now`}
-        />
+        <div className="text-center py-16">
+          <h1 className="text-3xl font-bold">
+            From mining rare earths to erasing digital footprints, Ellingson offers everything a morally flexible enterprise needs—whether you’re digging for gold or digging into government servers.
+          </h1>
+        </div>
+
 
         <FeaturesSection
           projectName={'Ellingson Mineral Company of New York, New York'}
