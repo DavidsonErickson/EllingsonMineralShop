@@ -1,4 +1,4 @@
-#trial flatlogic otel astronomy shop - template backend,
+#Ellingson Mineral Company of New York, New York - template backend,
 
 #### Run App on local machine:
 
@@ -38,10 +38,10 @@
 
 - Type this command to creating a new database.
 
-  - `postgres=> CREATE DATABASE db_trial_flatlogic_otel_astronomy_shop;`
+  - `postgres=> CREATE DATABASE db_ellingson_mineral_company_of_new_york__new_york;`
 
 - Then give that new user privileges to the new database then quit the `psql`.
-  - `postgres=> GRANT ALL PRIVILEGES ON DATABASE db_trial_flatlogic_otel_astronomy_shop TO admin;`
+  - `postgres=> GRANT ALL PRIVILEGES ON DATABASE db_ellingson_mineral_company_of_new_york__new_york TO admin;`
   - `postgres=> \q`
 
 ---

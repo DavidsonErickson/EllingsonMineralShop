@@ -1,6 +1,6 @@
 const errors = {
   app: {
-    title: 'trial flatlogic otel astronomy shop',
+    title: 'Ellingson Mineral Company of New York, New York',
   },
 
   auth: {

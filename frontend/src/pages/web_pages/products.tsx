@@ -26,7 +26,7 @@ import PricingSection from '../../components/WebPageComponents/PricingComponent'
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'trial flatlogic otel astronomy shop';
+  const projectName = 'Ellingson Mineral Company of New York, New York';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -127,10 +127,12 @@ export default function WebSite() {
           content={`Browse our extensive range of telescopes and astronomy equipment. Find the perfect tools to enhance your stargazing experience with ${projectName}.`}
         />
       </Head>
-      <WebSiteHeader projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteHeader
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           image={['Variety of telescopes on display']}
           mainText={`Discover Your Perfect Telescope Today`}
           subTitle={`Explore our curated selection of high-quality telescopes and accessories at ${projectName}. Whether you're a beginner or a seasoned astronomer, find the perfect tools to enhance your stargazing experience.`}
@@ -139,14 +141,14 @@ export default function WebSite() {
         />
 
         <GalleryPortfolioSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           images={images}
           mainText={`Explore Our Stellar Collection`}
           design={GalleryPortfolioDesigns.HORIZONTAL_WITH_BUTTONS || ''}
         />
 
         <FeaturesSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           image={['Telescope with starry background']}
           withBg={1}
           features={features_points}
@@ -156,13 +158,15 @@ export default function WebSite() {
         />
 
         <PricingSection
-          projectName={'trial flatlogic otel astronomy shop'}
-          withBg={0}
+          projectName={'Ellingson Mineral Company of New York, New York'}
+          withBg={1}
           features={pricing_features}
           description={description}
         />
       </main>
-      <WebSiteFooter projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteFooter
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
     </div>
   );
 }

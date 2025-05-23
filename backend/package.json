@@ -1,6 +1,6 @@
 {
-  "name": "trialflatlogicotelastronomyshop",
-  "description": "trial flatlogic otel astronomy shop - template backend",
+  "name": "ellingsonmineralcompanyofnewyorknewyork",
+  "description": "Ellingson Mineral Company of New York, New York - template backend",
   "scripts": {
     "start": "npm run db:migrate && npm run db:seed && npm run watch",
     "db:migrate": "sequelize-cli db:migrate",
