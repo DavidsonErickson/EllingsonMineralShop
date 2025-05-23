@@ -121,11 +121,8 @@ export default function WebSite() {
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
-        <title>{`Welcome to Our Astronomy Shop - Explore the Universe`}</title>
-        <meta
-          name='description'
-          content={`Discover a wide range of telescopes and astronomy equipment at our Astronomy Shop. Browse our products, learn about our features, and get in touch with us today.`}
-        />
+        <title>Ellingson Mineral Company – Everything a morally flexible enterprise needs</title>
+        <meta name='description' content='From mining rare earths to erasing digital footprints, Ellingson offers everything a morally flexible enterprise needs.' />
       </Head>
       <WebSiteHeader
         projectName={'Ellingson Mineral Company of New York, New York'}
@@ -136,7 +133,7 @@ export default function WebSite() {
           projectName={'Ellingson Mineral Company of New York, New York'}
           image={['Stargazing with a telescope']}
           mainText={`Explore the Universe with ${projectName}`}
-          subTitle={`Discover a world of telescopes and astronomy gear at ${projectName}. Your journey to the stars begins here. Browse our collection and find the perfect equipment for your stargazing adventures.`}
+          subTitle={`From mining rare earths to erasing digital footprints, Ellingson offers everything a morally flexible enterprise needs—whether you’re digging for gold or digging into government servers.`}
           design={HeroDesigns.IMAGE_BG || ''}
           buttonText={`Shop Now`}
         />
