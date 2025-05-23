@@ -52,7 +52,7 @@ export default function Login() {
     remember: true,
   });
 
-  const title = 'trial flatlogic otel astronomy shop';
+  const title = 'Ellingson Mineral Company of New York, New York';
 
   // Fetch Pexels image/video
   useEffect(() => {
@@ -99,11 +99,12 @@ export default function Login() {
     await dispatch(loginUser(rest));
   };
 
-  const setLogin = (target) => {
-    const email = target?.innerText;
-    setInitialValues((prev) => {
-      return { ...prev, email, password: '91bb331e' };
-    });
+  const setLogin = (target: HTMLElement) => {
+    setInitialValues((prev) => ({
+      ...prev,
+      email: target.innerText.trim(),
+      password: target.dataset.password ?? '',
+    }));
   };
 
   const imageBlock = (image) => (
@@ -208,6 +209,7 @@ export default function Login() {
                     Use{' '}
                     <code
                       className={`cursor-pointer ${textColor} `}
+                      data-password='91bb331e'
                       onClick={(e) => setLogin(e.target)}
                     >
                       admin@flatlogic.com
@@ -221,6 +223,7 @@ export default function Login() {
                     Use{' '}
                     <code
                       className={`cursor-pointer ${textColor} `}
+                      data-password='18b2bd9b51cc'
                       onClick={(e) => setLogin(e.target)}
                     >
                       client@hello.com

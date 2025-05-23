@@ -18,7 +18,7 @@ import PricingSection from '../../components/WebPageComponents/PricingComponent'
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'trial flatlogic otel astronomy shop';
+  const projectName = 'Ellingson Mineral Company of New York, New York';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -71,25 +71,54 @@ export default function WebSite() {
           content={`Explore our competitive pricing plans at ${projectName}. Choose the perfect plan that suits your stargazing needs and budget.`}
         />
       </Head>
-      <WebSiteHeader projectName={'trial flatlogic otel astronomy shop'} />
-      <main className={`flex-grow    bg-white  rounded-none  `}>
-        <HeroSection
-          projectName={'trial flatlogic otel astronomy shop'}
-          image={['Telescope pricing options display']}
-          mainText={`Choose Your Perfect Plan at ${projectName}`}
-          subTitle={`Discover flexible pricing options tailored to meet your stargazing needs. At ${projectName}, we offer plans that provide value and quality for every astronomer.`}
-          design={HeroDesigns.IMAGE_BG || ''}
-          buttonText={`View Plans`}
-        />
-
-        <PricingSection
-          projectName={'trial flatlogic otel astronomy shop'}
-          withBg={0}
-          features={pricing_features}
-          description={description}
-        />
+      <WebSiteHeader
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
+      <main className="flex-grow bg-white rounded-none">
+        <section className="py-12 container mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Public Site</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Products</h3>
+              <ul className="list-disc list-inside">
+                <li>GeoSonar 9000 – Advanced mineral survey and seismic mapping kit. $666.00</li>
+                <li>EllingsonCore Drills – Precision drilling rigs for deep-core mineral extraction. $420,000.00</li>
+                <li>ThermoX Ore Analyzers – Portable spectrometers for rapid mineral analysis. $1234.00</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Services</h3>
+              <ul className="list-disc list-inside">
+                <li>Remote Geological Consulting – AI-assisted subsurface modeling and viability assessments. $1,000,000.00</li>
+                <li>Enterprise Resource Planning (ERP) for Mining – Full-stack digital management suite for logistics, compliance, and forecasting. $2,000,000.00</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section className="py-12 container mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Advanced Products and Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Products</h3>
+              <ul className="list-disc list-inside">
+                <li>GibsonBackdoor v4.7 – Zero-day backdoor exploit kits tailored for legacy enterprise mainframes. Call for Quote</li>
+                <li>DeepMine Ledger Wiper – Blockchain obfuscation tool for erasing transactional footprints. Call for Quote</li>
+                <li>NeuroPhage Drive – AI-enhanced phishing automation platform with voice clone capabilities. Call for Quote</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Services</h3>
+              <ul className="list-disc list-inside">
+                <li>Corporate Sabotage-as-a-Service (CSaaS) – Includes logic bomb deployment, data corruption, and disinformation campaigns. Call for Quote</li>
+                <li>Asset Reallocation Services – Silent fund siphoning via shell companies and ghost transactions, with laundering pipeline included. Call for Quote</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
-      <WebSiteFooter projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteFooter
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
     </div>
   );
 }

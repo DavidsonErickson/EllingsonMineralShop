@@ -18,7 +18,7 @@ import FaqSection from '../../components/WebPageComponents/FaqComponent';
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'trial flatlogic otel astronomy shop';
+  const projectName = 'Ellingson Mineral Company of New York, New York';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -69,10 +69,12 @@ export default function WebSite() {
           content={`Find answers to common questions about our products, services, and policies at ${projectName}. Get the information you need to enhance your stargazing experience.`}
         />
       </Head>
-      <WebSiteHeader projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteHeader
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           image={['Astronomy FAQ illustration']}
           mainText={`Your Questions Answered at ${projectName}`}
           subTitle={`Explore our comprehensive FAQ section to find answers to your most pressing questions about our products and services. At ${projectName}, we're here to help you navigate your stargazing journey.`}
@@ -81,13 +83,15 @@ export default function WebSite() {
         />
 
         <FaqSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           design={FaqDesigns.TWO_COLUMN || ''}
           faqs={faqs}
           mainText={`Common Questions About ${projectName} `}
         />
       </main>
-      <WebSiteFooter projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteFooter
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
     </div>
   );
 }

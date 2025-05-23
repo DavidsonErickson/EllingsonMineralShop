@@ -47,9 +47,9 @@ const options = {
     openapi: '3.0.0',
     info: {
       version: '1.0.0',
-      title: 'trial flatlogic otel astronomy shop',
+      title: 'Ellingson Mineral Company of New York, New York',
       description:
-        'trial flatlogic otel astronomy shop Online REST API for Testing and Prototyping application. You can perform all major operations with your entities - create, delete and etc.',
+        'Ellingson Mineral Company of New York, New York Online REST API for Testing and Prototyping application. You can perform all major operations with your entities - create, delete and etc.',
     },
     servers: [
       {

@@ -37,9 +37,20 @@ const CartItemsData = [
 
     quantity: 1,
   },
+
+  {
+    // type code here for "relation_one" field
+
+    quantity: 1,
+  },
 ];
 
 const CartsData = [
+  {
+    // type code here for "relation_one" field
+    // type code here for "relation_many" field
+  },
+
   {
     // type code here for "relation_one" field
     // type code here for "relation_many" field
@@ -86,6 +97,12 @@ const CategoriesData = [
     description:
       'Equipment designed for capturing images of celestial objects.',
   },
+
+  {
+    name: 'Telescope Accessories',
+
+    description: 'Additional equipment to enhance telescope functionality.',
+  },
 ];
 
 const OrderItemsData = [
@@ -119,6 +136,14 @@ const OrderItemsData = [
     quantity: 1,
 
     price: 649.99,
+  },
+
+  {
+    // type code here for "relation_one" field
+
+    quantity: 1,
+
+    price: 2499.99,
   },
 ];
 
@@ -159,6 +184,16 @@ const OrdersData = [
     order_date: new Date('2023-10-04T09:20:00Z'),
 
     total_amount: 2499.99,
+
+    // type code here for "relation_many" field
+  },
+
+  {
+    // type code here for "relation_one" field
+
+    order_date: new Date('2023-10-05T14:10:00Z'),
+
+    total_amount: 199.99,
 
     // type code here for "relation_many" field
   },
@@ -220,6 +255,20 @@ const ProductsData = [
 
     // type code here for "relation_many" field
   },
+
+  {
+    name: 'Zhumell Z130',
+
+    description: 'Portable tabletop telescope for beginners.',
+
+    price: 199.99,
+
+    stock: 20,
+
+    // type code here for "images" field
+
+    // type code here for "relation_many" field
+  },
 ];
 
 // Similar logic for "relation_many"
@@ -268,6 +317,17 @@ async function associateCartItemWithProduct() {
   if (CartItem3?.setProduct) {
     await CartItem3.setProduct(relatedProduct3);
   }
+
+  const relatedProduct4 = await Products.findOne({
+    offset: Math.floor(Math.random() * (await Products.count())),
+  });
+  const CartItem4 = await CartItems.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (CartItem4?.setProduct) {
+    await CartItem4.setProduct(relatedProduct4);
+  }
 }
 
 async function associateCartWithCustomer() {
@@ -313,6 +373,17 @@ async function associateCartWithCustomer() {
   });
   if (Cart3?.setCustomer) {
     await Cart3.setCustomer(relatedCustomer3);
+  }
+
+  const relatedCustomer4 = await Users.findOne({
+    offset: Math.floor(Math.random() * (await Users.count())),
+  });
+  const Cart4 = await Carts.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (Cart4?.setCustomer) {
+    await Cart4.setCustomer(relatedCustomer4);
   }
 }
 
@@ -362,6 +433,17 @@ async function associateOrderItemWithProduct() {
   if (OrderItem3?.setProduct) {
     await OrderItem3.setProduct(relatedProduct3);
   }
+
+  const relatedProduct4 = await Products.findOne({
+    offset: Math.floor(Math.random() * (await Products.count())),
+  });
+  const OrderItem4 = await OrderItems.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (OrderItem4?.setProduct) {
+    await OrderItem4.setProduct(relatedProduct4);
+  }
 }
 
 async function associateOrderWithCustomer() {
@@ -407,6 +489,17 @@ async function associateOrderWithCustomer() {
   });
   if (Order3?.setCustomer) {
     await Order3.setCustomer(relatedCustomer3);
+  }
+
+  const relatedCustomer4 = await Users.findOne({
+    offset: Math.floor(Math.random() * (await Users.count())),
+  });
+  const Order4 = await Orders.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (Order4?.setCustomer) {
+    await Order4.setCustomer(relatedCustomer4);
   }
 }
 

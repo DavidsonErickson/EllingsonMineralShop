@@ -21,7 +21,7 @@ import FaqSection from '../../components/WebPageComponents/FaqComponent';
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'trial flatlogic otel astronomy shop';
+  const projectName = 'Ellingson Mineral Company of New York, New York';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -77,10 +77,12 @@ export default function WebSite() {
           content={`Reach out to us for any inquiries or support. Our team at ${projectName} is here to assist you with your stargazing needs.`}
         />
       </Head>
-      <WebSiteHeader projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteHeader
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           image={['Customer service representative smiling']}
           mainText={`Connect with ${projectName} Today`}
           subTitle={`We're here to help with any questions or support you need. Contact our team at ${projectName} and let us assist you in your stargazing journey.`}
@@ -89,21 +91,23 @@ export default function WebSite() {
         />
 
         <FaqSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           design={FaqDesigns.ACCORDION || ''}
           faqs={faqs}
           mainText={`Frequently Asked Questions about ${projectName} `}
         />
 
         <ContactFormSection
-          projectName={'trial flatlogic otel astronomy shop'}
+          projectName={'Ellingson Mineral Company of New York, New York'}
           design={ContactFormDesigns.WITH_IMAGE || ''}
           image={['Person typing on a laptop']}
           mainText={`Reach Out to ${projectName} `}
           subTitle={`We're available to assist you with any inquiries or support. Contact us anytime, and our team will respond promptly to ensure your satisfaction.`}
         />
       </main>
-      <WebSiteFooter projectName={'trial flatlogic otel astronomy shop'} />
+      <WebSiteFooter
+        projectName={'Ellingson Mineral Company of New York, New York'}
+      />
     </div>
   );
 }

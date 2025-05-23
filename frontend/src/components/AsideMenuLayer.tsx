@@ -45,7 +45,9 @@ export default function AsideMenuLayer({
         >
           <div className='text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0'>
             <Link href={'/home'}>
-              <b className='font-black'>trial flatlogic otel astronomy shop</b>
+              <b className='font-black'>
+                Ellingson Mineral Company of New York, New York
+              </b>
             </Link>
           </div>
           <button

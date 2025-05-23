@@ -5,7 +5,7 @@ import LayoutGuest from '../layouts/Guest';
 import { getPageTitle } from '../config';
 
 export default function PrivacyPolicy() {
-  const title = 'trial flatlogic otel astronomy shop';
+  const title = 'Ellingson Mineral Company of New York, New York';
   const [projectUrl, setProjectUrl] = useState('');
 
   useEffect(() => {
